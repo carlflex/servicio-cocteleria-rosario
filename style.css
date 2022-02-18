@@ -25,66 +25,80 @@ h2{
 
 section{
     height: 100vh;
+    overflow-y: scroll;
 }
 
-nav{
-    position: fixed;
-    padding: 10px 0px;
-    line-height: 30px;
+.navbar{
+    position:fixed;
     width: 100%;
+    font-size: 20px;
     z-index: 10;
     transition: all 1s;
 }
 
-.active{
-    transition: all 1s;
-    background: #000 
+.menu{
+    list-style-type: none;
+    display: none;
+    padding: 10px;
+    
 }
 
 
+.menu-link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 800;
+}
+
+
+
+.menu-link:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.menu li{
+    text-align: center;
+    margin: 40px auto;
+}
+
 .logo{
+    display: inline-block;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
-.nav__content{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 5px 0px;
-    font-style:italic;
+.logo img{
+    height: 5vh;
+}
+
+.toggle{
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.active{
+    display: block;
+}
+
+.active2{
+    transition: all 1s;
+    background: rgb(3, 3, 3) 
 }
 
 
-
-#logo img {
-  height: 5vh;
-}
-
-.nav__menu{
-   width: 800px;
-   margin-right: 100px;
-   display: flex;
-   justify-content: space-around;
-   padding: 5px 0px;
-   font-size: 5px;
-}
-
-.nav__a{
-    color: #f5f5ff;
-    font-family: 'Rowdies', sans-serif;
-    transition: all 0.5s;
-    font-size: 3em;
-}
-
-.nav__a:hover{
-    color: #808088;
-}
+/*inicio*/
 
 #inicio{
     background-image: url(/asets/inicio.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     display: grid;
     place-items: center;
 }
@@ -116,6 +130,7 @@ span{
 
 #nosotros{
     background: #ffffff;
+    overflow: hidden;
 }
 
 .h2{
@@ -180,6 +195,7 @@ span{
 
 #servicios{
     height: 120vh;
+    overflow: hidden;
 }
 
 .s__content{
@@ -236,6 +252,10 @@ span{
 
 /*contacto*/
 
+#contacto{
+    overflow: hidden;
+}
+
 .c__content{
     height: 100%;
     width: 100%;
@@ -265,4 +285,40 @@ span{
         align-items: center;
         height: 100%;
     }
+}
+
+
+@media (min-width: 769px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .menu{
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+    }
+
+    .menu li{
+        margin: 0;
+    }
+
+    .menu-link{
+        margin-left: 40px;
+    }
+
+    .logo{
+        margin-top: 0;
+    }
+
+    .toggle{
+        display: none;
+    }
+
 }
