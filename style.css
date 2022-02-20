@@ -239,7 +239,7 @@ span{
 
 .s__subcontent2{
     width: 100%;
-    height: 90%;
+    height: 100%;
     margin-top: 3%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -344,14 +344,17 @@ footer h5{
     .subcontent{
         height: 500px;
     }
+
     .s__content2{
+        margin-top: 15%;
+    }
+    .s__subcontent2{
        
-        grid-template-columns: repeat(4, 4fr);
-        background: rebeccapurple;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #servicios{
-        height: 200vh;
+        height: 150vh;
     }
 
     #servicios h2{
